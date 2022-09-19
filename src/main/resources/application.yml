@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discoveryservice
+
+eureka:
+  client:
+    #register-with-eureka: false 유레카 서버에 자기 자신을 클라이언트로 등록하지 않도록 하는 설정.
+    #이건 디스커리리 서버 역할을 하는 유레카 서버이므로 클라이언트로써 디스커버리서버에 등록되지 않도록 false로 설정한다.
+    register-with-eureka: false
+    #클라이언트로써 eureka서버에서 eureka레지스트리 정보를 가져올지 여부를 설정한다.
+    #위와 마찬가지로 클라이언트가 아니므로 false로 설정.
+    fetch-registry: false
